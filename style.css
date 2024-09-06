@@ -1,0 +1,170 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Estiliza o corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif; /*define a fonte padrão */
+    display: flex; /* usa o flexbox para layout */
+    flex-direction: column; /* alinha os itens na vertical */
+    align-items: center; /* centraliza os itens horizontalmente */
+    justify-content: center; /* centraliza os itens verticalmente */
+    height: 100vh; /*preenche a altura total da viewport */
+    margin: 0; /* remove a margem padrão */
+    padding: 0; /* remove o padding padrão */
+    background-color: #FFFFFF;
+    place-items: center;
+    
+}
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/banner\ 22.jpg); /* Substitua por seu caminho de imagem */
+    background-size: cover;
+    filter: blur(5px); /* da efeito de desfoque a imagem */
+    z-index: -1;
+  }
+  
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 2.5rem; /* tamanho da fonte */
+    color: #ffffff;
+    text-align: center; /* alinha o texto no centro */
+    letter-spacing: 0.4rem; /* espaçamento entre as letras */
+    z-index: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem; /*espaçamento abaixo de cada seção */
+}
+
+section input {
+    width: 30rem; /*largura dos inputs */
+    border: none; /*remove a borda padrão */
+    padding: 1rem; /*espaçamento interno */
+    border-radius: 1.5rem; /*borda arredondada */
+    margin-bottom: 1rem; /* espaçamento abaico dos inputs */
+    color: #45474b; /* cor do texto */
+    font-size: 1rem; /* tamanho da fonte */
+    box-sizing: border-box; /* inclui padding e border na largura total */
+}
+
+section button {
+    padding: 0.8rem 1.2rem; /*espaçamento interno dos botões */
+    border: none; /* remove a borda padrão */
+    border-radius: 1.5rem; /* borda arredondada */
+    background-color: #b41a34; /* cor de fundo do botão */
+    color: #f5f7f8;
+    font-size: 1rem; /* tamanho da fonte */
+    cursor: pointer; /*muda o cursor para indicar que é clicável */
+}
+
+section button:hover {
+    background-color: #662c1e; /* muda a cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*adiciona uma sombra mais intensa */
+}
+
+.resultados-pesquisa {
+    width: 60rem; /* largura máxima da caixa de resultados */
+    height: 46vh; /* altura máxima da caixa de resultados */
+    overflow-y: auto; /* adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* espaçamento acima da caixa de resultados */
+    padding: 1rem; /*espaçamento interno */
+    border-radius: 0.6rem;
+}
+
+.item-resultado {
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.item-resultado a {
+    text-decoration: none; /*remove o sublinado padrão dos links */
+    color: #b41a34;
+}
+
+.item-resultado a:hover {
+    text-decoration: underline; /*add sublinado ao passar o mouse */
+}
+
+.descricao-meta {
+    color: #45474b;
+    margin: 0.5rem 0; /*margem acima e abaixo */
+}
+
+footer {
+    background-color: #b8502d;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0;
+    width: 100%; /*largura total da página */
+    position: absolute; /*posiciona o rodapé */
+    bottom: 0; /*alinha ao fundo da página */
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    section input {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+    }
+
+    .resultados-pesquisa {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
+        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    }
+
+    section input {
+        width: 17rem; /* Largura total dos inputs em telas pequenas */
+    }
+
+    section button {
+        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
+    .resultados-pesquisa {
+        width: 90%; /* Largura da caixa de resultados em telas pequenas */
+        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+    }
+}
